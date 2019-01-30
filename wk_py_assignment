@@ -1,0 +1,58 @@
+#-------------------- INTRODUCTION ---------------------------------------------
+usrnm=input ("Good Evening! May I know your name, please? :")
+print ("Welcome ", usrnm, "to the Canada Quiz. Pleasure to have you here!","\nYou will be asked three questions in this quiz. Each question has points associated and you have to answer those correctly to get maximum points","\nLet’s begin!")
+
+readyCheck1 = input ("Are you ready, please press 1:  ")
+
+#----------- Quiz #1 ask, show option, score keep and print result--------------
+print ("\nQuestion #1: Which is the most ranked famous city in Canada?", "\nYour answer 2has stacked ranking and gets points on scale of 10 to 40; 40 being for most famous city!") 
+cityList =["1. Toronto","2. Quebec","3. Vancouver","4. Winnipeg"]
+for i in cityList:
+	print (i)
+ans1 = input ("Your answer for first question is: ")
+score=0 #global variable declaration
+if ans1=="1" or ans1=="Toronto":
+   score=score+40
+elif ans1=="2" or ans1=="Quebec":
+   score=score+30
+elif ans1=="3" or ans1=="Vancouver":
+   score=score+20
+elif ans1=="4" or ans1=="Winnipeg":
+   score=score+10
+else:
+   print ("Answer undefined, let's try one more time!")
+   ans1 = input ("Your answer for first question is: ")
+  
+print ("Congratulations ", usrnm, "your score at step#1 is: ", score)
+readyCheck2 = input ("\nLet's move to next question... Are you ready, please press 1:  ")
+#--------------------- Question #2 ---------------------------------------------
+print ("\nQuestion #2: What’s capital of Canada?") 
+cityList2 =["1. Toronto","2. Ottawa","3. None of the above!"]
+for i in cityList2:
+  print (i)
+ans2 = input ("\nYour answer for second question is: ")
+if ans2== "Ottawa" or ans2== "2":
+ score=score+20
+elif ans2== "Toronto" or ans2== "1":
+  score=score-5
+else:
+  score=score-5
+print ("Keep going ", usrnm, "your score at step#2 is: ", score)
+readyCheck2 = input ("\nLet's move to next question... Are you ready, please press 1:  ")
+#--------------------- Question #3 ---------------------------------------------
+print ("\nQuestion #3: Where is the GM plant located in Canada?") 
+cityList3 =["1. London","2. Oshawa","3. Burlignton", "4. Richmond"]
+for i in cityList3:
+  print (i)
+ans3 = input ("\nYour answer for third question is: ")
+if ans2== "Oshawa" or ans2== "2":
+  score=score+20
+else:
+  score=score-5
+
+readyCheck2 = input ("\nThat's all... Are you ready to see your final score, please press 1:  ")
+print ("Your final score ", usrnm, "at step#3 is: ", score)
+print ("\Thank you for participating; have a nice warm day ahead!")
+#--------------------- End of Puzzle -------------------------------------------
+
+  
